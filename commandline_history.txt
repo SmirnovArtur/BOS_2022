@@ -1,0 +1,286 @@
+    1  echo "it's hard to do that"
+    2  echo 'it'\''s hard to do that'
+    3  echo '"Пример текста в кавычках"'
+    4  echo '# эта строка не является комментарием'
+    5  echo 'Это'" всё"' будет один'\ 'аргумент'
+    6  whoami
+    7  su
+    8  whoami
+    9  whoaim
+   10  echo "Hello World"
+   11  echo Hello World
+   12  echo HelloWorld
+   13  echo Hello World !
+   14  date
+   15  cal
+   16  man cal
+   17  cal -3
+   18  cal --three
+   19  history
+   20  clear
+   21  cal --three
+   22  clear
+   23  cal --three
+   24  pwd
+   25  cd /
+   26  pwd
+   27  cd ..
+   28  pwd
+   29  cd ../
+   30  pwd
+   31  cd
+   32  pwd
+   33  cd /
+   34  ls
+   35  ls /var
+   36  cd
+   37  ls
+   38  cd ..
+   39  pwd
+   40  cd
+   41  pwd
+   42  cd ..
+   43  pwd
+   44  ls
+   45  cd
+   46  ls -i
+   47  man ls
+   48  ls -l
+   49  cd
+   50  mkdir fruits
+   51  ls
+   52  cd /
+   53  mkdir animals
+   54  mkdir ~/animals
+   55  ls
+   56  touch /tmp/temp
+   57  cd tmp
+   58  ls
+   59  vim temp
+   60  cd
+   61  ls
+   62  cd fruits
+   63  ls
+   64  man touch
+   65  touch apple banana
+   66  ls
+   67  rm apple banana
+   68  ls
+   69  touch apple banana pineaple lion
+   70  ls
+   71  touch cat.txt dog.txt elephant.txt
+   72  ls
+   73  ls -l
+   74  ls -l apple
+   75  ls b*
+   76  ls a*
+   77  ls *a
+   78  ls *t
+   79  ls [bi]*
+   80  ls b* i*
+   81  cp /etc/passwd ~
+   82  ls
+   83  cp /etc/issue apple
+   84  ls
+   85  vim apple
+   86  cat apple
+   87  cat /etc/issue
+   88  mv lion /animals
+   89  mv lion ~/animals
+   90  cd /
+   91  ls
+   92  cd
+   93  ls
+   94  cd fruits
+   95  ls
+   96  mv pineaple pineapple
+   97  ls
+   98  cd
+   99  ls
+  100  map wc
+  101  man wc
+  102  cat /etc/passwd
+  103  wc -l /etc/passwd
+  104  cd
+  105  ln -s /etc/passwd passwd_link
+  106  ls
+  107  vim passwd_link
+  108  ln .bash_history history_hard
+  109  ls
+  110  vim history_hard
+  111  ls -l ~/.bash_history
+  112  ls -l passwd
+  113  man ls
+  114  rm fruits/apple
+  115  ls
+  116  cd fruits
+  117  ls
+  118  cd
+  119  mkdir rmme
+  120  ls
+  121  rmdir rmme
+  122  ls
+  123  rmdir fruits
+  124  rm -fr fruits
+  125  ls
+  126  cat /etc/passwd /var/log/boot.log
+  127  cat /var/log/boot.log
+  128  sudo cat /var/log/boot.log
+  129  cat /var/log/boot.log
+  130  vim /var/log/boot.log
+  131  sudo vim /var/log/boot.log
+  132  sudo cat /etc/passwd /var/log/boot.log
+  133  cd
+  134  cp /etc/init.d/ ~
+  135  cp -r /etc/init.d/ ~
+  136  ls
+  137  vim init.d
+  138  cat init.d
+  139  cd init.d
+  140  ls
+  141  cat functions
+  142  ls
+  143  cat README
+  144  cd
+  145  rm -r init.d
+  146  ls
+  147  man cut
+  148  man sort
+  149  cut -d: -f1 /etc/passwd | sort -d
+  150  cut -d: -f1 /etc/passwd | sort
+  151  vim /etc/passwd
+  152  cut -d: -f1,3,4 /etc/passwd | column -ts: | less
+  153  vim /etc/passwd
+  154  cut -d: -f1,3,4 /etc/passwd | column -ts: | less
+  155  cut -d: -f1,3 /etc/passwd | column -ts: | less
+  156  map column
+  157  man column
+  158  man less
+  159  man cut
+  160  grep :/bin/bash /etc/passwd | wc -l
+  161  man grep
+  162  grep :/bin/bash /etc/passwd | cut -d: -f1 | surt -r
+  163  grep :/bin/bash /etc/passwd | cut -d: -f1 | sort -r
+  164  vim /etc/passwd
+  165  man rpm
+  166  man head
+  167* rpm -qa --qf '%{NAME}: %{SIZE}\n' |
+  168  man head
+  169  rpm -qa --qf '%{NAME}: %{SIZE}\n' | sort -rn -k2,2 |hean -n 25
+  170  rpm -qa --qf '%{NAME}: %{SIZE}\n' | sort -rn -k2,2 |head -n 25
+  171  rpm -ql man-db | xargs -l du    2> /dev/null  | sort -n
+  172  top -b -n1
+  173  man sort
+  174  top -b -n1 | sort -d
+  175  top -b -n1 | sort -n
+  176  man sort
+  177  top -b -n1 | sort -d -k12,1
+  178  man sort
+  179  top -b -n1 | sort --debug
+  180  top -b -n1 | sort --debug 5
+  181  top -b -n1 | sort --debug gdm
+  182  man sort
+  183  rpm -qa --qf '%{NAME}: %{SIZE}\n'
+  184  rpm -qa --qf 
+  185  rpm -qa
+  186  rpm -qa --qf '%{NAME}: %{SIZE}\n' | sort -rn -k2,2
+  187  man sort
+  188  top -b -n1 | sort --debug
+  189  top -b -n1 | sort -k2,2 --debug
+  190  top -b -n1 | sort -k12,12 --debug
+  191  top -b -n1 | sort -k12,12
+  192  top -b -n1 | tail -n+8 | cut -c7-  | tr -s ' ' '\t' | cut -f11,5
+  193  top -b -n1
+  194  top -b -n1 | tail -n+8 | cut -c7-  | tr -s ' ' '\t' | cut -f12,10
+  195  top -b -n1 | tail -n+8 | cut -c7-  | tr -s ' ' '\t' | cut -f10,12
+  196  top -b -n1 | tail -n+8 | cut -c7-  | tr -s ' ' '\t' 
+  197  man cut
+  198  man sort
+  199  top -b -n1 | tail -n+8 | cut -c7-  | tr -s ' ' '\t' | cut -f10,12
+  200  top -b -n1 | tail -n+8 | cut -c7-  | tr -s ' ' '\t' | cut -f12,10
+  201  top -b -n1 | tail -n+8 | cut -c7-  | tr -s ' ' '\t' | cut -f12
+  202  top -b -n1 | tail -n+8 | cut -c7-  | tr -s ' ' '\t' | cut -f12 -f10
+  203  top -b -n1 | tail -n+8 | cut -c7-  | tr -s ' ' '\t' | cut -f12 | cut -f10
+  204  top -b -n1 | tail -n+8 | cut -c7-  | tr -s ' ' '\t' | cut -f12.10
+  205  top -b -n1 | tail -n+8 | cut -c7-  | tr -s ' ' '\t' | cut -f12,10
+  206  top
+  207  cut /etc/passwd
+  208  man cut
+  209  cut -d: -f1 /etc/passwd
+  210  cut -d /etc/passwd
+  211  cut -d: /etc/passwd
+  212  vim /etc/passwd
+  213  cut -d: -f /etc/passwd
+  214  man cut
+  215  cut -l /etc/passwd
+  216  man cut
+  217  cut -f /etc/passwd
+  218  cat /etc/passwd
+  219  man sort
+  220  sort -r /etc/passwd
+  221  sort -r /etc/passwd --debug
+  222  vim /etc/passwd
+  223  sort -r -k5,5 /etc/passwd
+  224  sort -r -k5,5 /etc/passwd | tr ":" " "
+  225  sort -n -k5,5 /etc/passwd | tr ":" " "
+  226  sort -k5,5 /etc/passwd | tr ":" " "
+  227  man sort
+  228  sort -d -k5,5 /etc/passwd | tr ":" " "
+  229  cat /etc/passwd
+  230  cut -f5,5 | sort -d -k5,5 /etc/passwd | tr ":" " "
+  231  cut -f7,5 /etc/passwd
+  232  cut -d: -f7,5 /etc/passwd
+  233  cut -d: -f7,5 /etc/passwd | tr ":" " "
+  234  tr ":" " " etc/passwd
+  235  man tr
+  236  cut tr ":" " " etc/passwd 
+  237  cut etc/passwd | tr ":" " "
+  238  cat etc/passwd | tr ":" " "
+  239  cat /etc/passwd | tr ":" " "
+  240  man cat
+  241  cat tr ":" " " | /etc/passwd
+  242  cat /etc/passwd | tr ":" " "top -b -n1
+  243  top -b -n1
+  244  top -b -n1 | tail -n+8 | cut -c7-  | tr -s ' ' '\t' | cut -f11,5
+  245  cut -d: -f1,3,4 /etc/passwd | column -ts: | less
+  246  cut -d: -f1,3,4 /etc/passwd | less
+  247  cut -d: -f1,3,4 /etc/passwd
+  248  cut -d: -f5,7 /etc/passwd
+  249  cat /etc/passwd
+  250  cut -d: -f5,7 /etc/passwd | sort -d
+  251  man sort
+  252  cut -d: -f5,7 /etc/passwd | sort -d -k5,5
+  253  cut -d: -f5,7 /etc/passwd | sort -d
+  254  yum install -y git
+  255  sudo yum install -y git
+  256  cd /usr/share/doc/git-*
+  257  cd /usr/share/doc
+  258  ls
+  259  cat user-manual.txt | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | grep -v '[^a-z]' | sort | uniq -c | sort -rn | head -5
+  260  cd git
+  261  ls
+  262  cat user-manual.txt | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | grep -v '[^a-z]' | sort | uniq -c | sort -rn | head -5
+  263  cat user-manual.txt | tr -cs '[:alpha:]' '\n' | tr '[:upper:]' '[:lower:]' | sort | uniq -c | sort -rn | head -5
+  264  tr '[:lower:]' '[:upper:]' < user-manual.txt |  tr -d '[:punct:] \n\t' | fold -w1 | sort | uniq -c | sort -rn | head -5
+  265  tr -cs '[:alpha:]' '\n' < user-manual.txt | less | grep -E ........ | sort | uniq -c | sort -rn | head
+  266  ping ya.ru
+  267  curl wttr.in
+  268  hostname -I
+  269  curl ifconfig.me
+  270  wget https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README-ru.md
+  271  cd
+  272  wget https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README-ru.md
+  273  ls
+  274  less README-ru.md
+  275  cat README-ru.md
+  276  man less
+  277  less README-ru.md
+  278  sudo id
+  279  id
+  280  less
+  281  less /var/log/messages
+  282  id
+  283  sudo less /var/log/messages
+  284  wheel
+  285  su
+  286  history > commandline_history.txt
