@@ -1,0 +1,88 @@
+[floppa@localhost test]$ ls -lR
+.:
+total 4
+drw-rw-rw-. 2 floppa floppa 22 Oct 18 21:32 dir
+-r--r-----. 1 root   floppa  5 Oct 18 21:29 file
+-rw-------. 1 floppa floppa  0 Oct 18 21:38 file1
+-rw-rw-rw-. 1 floppa floppa  0 Oct 18 21:38 file2
+
+./dir:
+ls: cannot access './dir/new_file': Permission denied
+total 0
+-????????? ? ? ? ?            ? new_file
+[floppa@localhost test]$ history
+    1  ls
+    2  cd
+    3  ls
+    4  mkdir test
+    5  cd test
+    6  ls
+    7  touch file
+    8  ll file
+    9  ls -l file
+   10  chmod 000 file
+   11  ls -l file
+   12  vim file
+   13  sudo vim file
+   14  cat file
+   15  chmod 200 file
+   16  ll file
+   17  vim file
+   18  sudo vim file
+   19  cat file
+   20  chmod 240 file
+   21  ll file
+   22  cat file
+   23  chmod 640 file
+   24  ls -l file
+   25  cat file
+   26  mkdir dir
+   27  echo "file 2" > new_file
+   28  ls
+   29  rm new_file
+   30  ls
+   31  echo "file 2" > dir/new_file
+   32  ls
+   33  ls dir
+   34  cat dir/new_file
+   35  chmod 666 dir
+   36  ls
+   37  ll dir
+   38  cat dir/new_file
+   39  rm dir/new_file
+   40  ls
+   41  chown root:root file
+   42  chown root file
+   43  chgrp root file
+   44  umask
+   45  umask 0077
+   46  umask
+   47  touch file1
+   48  ll file1
+   49  umask 0000
+   50  umask
+   51  touch file2
+   52  ll file2
+   53  cat file
+   54  ls -lR
+   55  history
+[floppa@localhost test]$ 
+
+
+Another window:
+
+[floppa@localhost test]$ 
+[floppa@localhost test]$ su
+Password: 
+[root@localhost test]# ls
+dir  file  file1  file2
+[root@localhost test]# chown root file
+[root@localhost test]# chmod 400 file
+[root@localhost test]# exit
+exit
+[floppa@localhost test]$ su
+Password: 
+[root@localhost test]# chmod 440 file
+[root@localhost test]# exit
+exit
+[floppa@localhost test]$
