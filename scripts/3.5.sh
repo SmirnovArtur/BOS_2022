@@ -1,2 +1,2 @@
 #!/bin/bash
-grep -n "$1" "$2" -m "$3" |sort 
+grep -m "$3" "$1" "$2" | sort | cat -n
