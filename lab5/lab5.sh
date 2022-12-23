@@ -1,13 +1,15 @@
 #!/bin/bash
 
-ps axo euid,ruid,comm | tail -n +2 | while read line
+file="tmp.out"
 
+ps -eo euid,ruid,comm | tail -n +2  >"$file"
+exec 0<"$file"
+
+while read euid ruid name 
 do
-
-	str=($line)
-	if [ ${str[0]} != ${str[1]} ]
-	then
-		echo ${str[2]}
+	if [[ $euid != $ruid ]]; then
+		echo "$name"
 	fi
-
 done
+
+rm "$file"
