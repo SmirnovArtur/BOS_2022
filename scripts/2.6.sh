@@ -1,2 +1,2 @@
 #!/bin/bash
-find -type f | xargs -d\\n md5sum | sort | uniq -w 2 -c -d | sed 's/   //g' | sed 's/ .*. //g' | sed 's/\.\// /'
+md5sum *.txt | sort -k2 | uniq -w32 -d -c | sort -k1 | cut -d " " -f 7,10
