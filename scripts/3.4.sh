@@ -1,5 +1,5 @@
 #!/bin/bash
-CATNAME = "$1"
+CATNAME="$1"
 
 echo "Каталоги:"
 ls "$1" -al |grep ^d
