@@ -1,15 +1,11 @@
 #!/bin/bash
 
-file="tmp.out"
+ps -eo pid,user,%cpu,%mem,comm | \
 
-ps -eo euid,ruid,comm | tail -n +2  >"$file"
-exec 0<"$file"
+tail -n +2 | \
 
-while read euid ruid name 
-do
-	if [[ $euid != $ruid ]]; then
-		echo "$name"
-	fi
+while read -r pid user cpu mem comm; do
+  if [ "$(id -u "$user")" != "$(ps -o "ruid=" -o "euid=" -p "$pid" | awk '{ print $1 }')" ]; then
+    echo "$comm"
+  fi
 done
-
-rm "$file"
